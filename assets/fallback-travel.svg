@@ -1,0 +1,21 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F6ECDD"/>
+  <rect x="56" y="56" width="1088" height="688" rx="36" fill="#FFF9F1" stroke="#E3D1BF" stroke-width="4"/>
+  <circle cx="970" cy="172" r="72" fill="#F4C67A"/>
+  <path d="M1016 126C999.2 139.2 972.4 171.6 968 226" stroke="#C97043" stroke-width="12" stroke-linecap="round"/>
+  <path d="M132 584C233.333 520 315.733 493.333 379.2 504C459.2 517.333 524.533 593.333 612 596C687.2 598.293 738 547.333 801.6 542C867.2 536.667 930.667 576 1068 670V742H132V584Z" fill="#D3E2DE"/>
+  <path d="M188 530C286 448.667 362.667 413.333 418 424C487.167 437.333 536.48 506.213 612 508C693.658 509.931 761.333 433.333 825 430C892.2 426.481 960.333 465.667 1046 548V742H188V530Z" fill="#87AFA6"/>
+  <path d="M318 352L426 246L548 368" stroke="#C97043" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M510 390L628 274L772 418" stroke="#2E6B6F" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M256 506H840" stroke="#E3D1BF" stroke-width="6" stroke-linecap="round"/>
+  <rect x="226" y="468" width="188" height="144" rx="24" fill="#FFF3E3" stroke="#D7B89B" stroke-width="4"/>
+  <path d="M266 526H374" stroke="#D45F38" stroke-width="10" stroke-linecap="round"/>
+  <path d="M266 560H346" stroke="#D9B99E" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="654" cy="238" r="56" fill="#FFF0D7" stroke="#D7B89B" stroke-width="4"/>
+  <path d="M632 238H676" stroke="#D45F38" stroke-width="10" stroke-linecap="round"/>
+  <path d="M654 216V260" stroke="#D45F38" stroke-width="10" stroke-linecap="round"/>
+  <path d="M902 502C892 470 894 434 916 402C952 350 1028 328 1072 348" stroke="#D45F38" stroke-width="10" stroke-linecap="round"/>
+  <path d="M916 508C948.667 489.333 985.333 488.667 1026 506" stroke="#D45F38" stroke-width="10" stroke-linecap="round"/>
+  <text x="94" y="120" fill="#6C5347" font-family="Arial, sans-serif" font-size="42" font-weight="700">Travel Guide Placeholder</text>
+  <text x="94" y="174" fill="#9A7F70" font-family="Arial, sans-serif" font-size="28">외부 이미지가 없을 때 표시되는 로컬 폴백 일러스트</text>
+</svg>

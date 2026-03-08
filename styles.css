@@ -1,0 +1,502 @@
+:root {
+  --bg: #f5efe4;
+  --surface: rgba(255, 252, 246, 0.9);
+  --surface-strong: #fffdf7;
+  --ink: #1f1b19;
+  --muted: #655b55;
+  --line: rgba(67, 56, 48, 0.12);
+  --brand: #d45f38;
+  --brand-deep: #8f3a21;
+  --accent: #0f6c71;
+  --shadow: 0 24px 60px rgba(68, 44, 26, 0.12);
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --container: min(1160px, calc(100vw - 32px));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "SUIT", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(212, 95, 56, 0.18), transparent 28%),
+    radial-gradient(circle at right 12% top 12%, rgba(15, 108, 113, 0.16), transparent 24%),
+    linear-gradient(180deg, #f7f0e2 0%, #f4ece0 45%, #efe5d7 100%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 20px 0 48px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  align-content: start;
+  gap: 28px;
+}
+
+.topbar {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 251, 245, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hero-panel,
+.section,
+.footer {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  padding: 32px;
+}
+
+.hero-copy {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+}
+
+.eyebrow,
+.section-kicker,
+.day-index,
+.food-type,
+.tip-category,
+.budget-tier,
+.overview-label {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.9rem);
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4vw, 3.1rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.hero-description,
+.section-heading p,
+.footer p,
+.day-summary,
+.food-description,
+.tip-description,
+.overview-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: var(--brand);
+  color: #fffaf4;
+}
+
+.button-secondary {
+  border-color: rgba(31, 27, 25, 0.15);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.hero-visual {
+  margin: 0;
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: calc(var(--radius-xl) - 8px);
+  background: #eadbc5;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-visual figcaption {
+  position: absolute;
+  inset: auto 16px 16px 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(23, 18, 16, 0.7);
+  color: rgba(255, 250, 244, 0.92);
+  font-size: 0.92rem;
+}
+
+main {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.section {
+  padding: 28px;
+}
+
+.section-heading {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.overview-grid,
+.tips-grid,
+.budget-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.overview-card,
+.tip-card,
+.budget-card {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+  min-height: 180px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
+}
+
+.overview-value {
+  font-size: 1.6rem;
+}
+
+.itinerary-list,
+.food-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.day-card,
+.food-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface-strong);
+  overflow: hidden;
+}
+
+.day-card-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 22px 0;
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(15, 108, 113, 0.1);
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.day-card-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  padding: 20px 22px 22px;
+}
+
+.day-image,
+.food-image {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #e7dbcc;
+}
+
+.day-content {
+  display: grid;
+  gap: 18px;
+}
+
+.timeline,
+.budget-breakdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline li {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-left: 3px solid rgba(212, 95, 56, 0.35);
+  border-radius: 14px;
+  background: rgba(244, 236, 224, 0.72);
+}
+
+.timeline time {
+  font-weight: 700;
+  color: var(--brand-deep);
+}
+
+.timeline strong {
+  font-size: 1rem;
+}
+
+.timeline p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.day-tags,
+.food-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag,
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(15, 108, 113, 0.08);
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.food-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.food-copy {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+}
+
+.budget-card h3 {
+  font-size: 1.9rem;
+}
+
+.budget-breakdown {
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.budget-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer {
+  margin-top: 22px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px 28px;
+}
+
+.footer-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-title {
+  margin: 0 0 8px;
+  font-size: 1.12rem;
+  font-weight: 800;
+}
+
+.source-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.source-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(15, 108, 113, 0.08);
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.footer-link {
+  font-weight: 800;
+  color: var(--brand-deep);
+}
+
+.image-fallback {
+  object-fit: contain;
+  padding: 16px;
+  background:
+    radial-gradient(circle at top, rgba(212, 95, 56, 0.12), transparent 45%),
+    linear-gradient(180deg, rgba(243, 231, 214, 0.88), rgba(250, 246, 239, 0.96));
+}
+
+@media (max-width: 1024px) {
+  .hero-panel,
+  .day-card-body,
+  .food-card,
+  .overview-grid,
+  .tips-grid,
+  .budget-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .food-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-shell {
+    width: min(100vw - 20px, 100%);
+    padding-top: 10px;
+  }
+
+  .topbar,
+  .day-card-header,
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .topbar-links {
+    justify-content: space-between;
+  }
+
+  .hero-panel,
+  .section,
+  .footer {
+    padding: 20px;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .overview-grid,
+  .tips-grid,
+  .budget-cards,
+  .day-card-body {
+    grid-template-columns: 1fr;
+  }
+
+  .day-image,
+  .food-image {
+    min-height: 200px;
+  }
+}

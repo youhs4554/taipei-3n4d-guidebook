@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Taipei guidebook favicon">
+  <rect width="64" height="64" rx="16" fill="#f5efe4" />
+  <path d="M15 46h34" stroke="#8f3a21" stroke-width="4" stroke-linecap="round" />
+  <path d="M20 46V24l12-8 12 8v22" fill="none" stroke="#d45f38" stroke-width="4" stroke-linejoin="round" />
+  <path d="M26 46V31h12v15" fill="none" stroke="#0f6c71" stroke-width="4" stroke-linejoin="round" />
+  <path d="M32 10v8" stroke="#0f6c71" stroke-width="4" stroke-linecap="round" />
+</svg>
