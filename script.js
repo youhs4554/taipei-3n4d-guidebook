@@ -2,224 +2,242 @@ const FALLBACK_IMAGE = "./assets/fallback-travel.svg";
 
 const guidebookData = {
   lastUpdated:
-    "최종 정리일: 2026년 3월 8일. 항공편 시각은 미정이라 1일차 점심 도착, 4일차 오후 또는 저녁 출국 기준으로 구성했습니다.",
+    "최종 정리일: 2026년 3월 8일. 실제 항공편은 2026년 3월 13일 금요일 00:30 타오위안 도착, 2026년 3월 16일 월요일 01:55 타오위안 출발 기준으로 반영했습니다.",
   overview: [
     {
-      label: "여행 기간",
-      value: "3박 4일",
-      note: "첫날은 시먼딩 적응, 둘째 날은 강변과 구시가지, 셋째 날은 린커우로 이동 피로를 분산한 구성입니다.",
+      label: "여행 날짜",
+      value: "2026.03.13-03.16",
+      note: "3월 12일 목요일 밤 대구 출발이지만, 타이베이 체류는 3월 13일 금요일 새벽부터 시작됩니다.",
     },
     {
-      label: "숙소 권장",
-      value: "1-2박 시먼딩 / 3박째 선택형",
-      note: "새벽 출국이면 마지막 밤만 A8 또는 A9로 옮기고, 일반 출국이면 시먼딩이나 타이베이 메인역에 계속 머물러도 충분합니다.",
+      label: "숙소",
+      value: "At Home Hotel Nanshi",
+      note: "Ningxia Night Market 바로 앞이라 첫날과 마지막 날 체력 소모를 크게 줄일 수 있습니다. 쉬었다가 다시 내려오기 좋은 위치입니다.",
     },
     {
-      label: "핵심 교통",
-      value: "Airport MRT + MRT + Uber",
-      note: "도심은 MRT가 가장 편하고, 린커우처럼 동선이 끊기는 구간만 짧게 택시를 섞는 편이 시간을 아낍니다.",
+      label: "공항 이동",
+      value: "입국 픽업 + 3/15 22:00 샌딩",
+      note: "가장 스트레스가 큰 새벽 도착과 심야 출국이 이미 정리돼 있어, 공황과 피로 관리 측면에서 큰 장점입니다.",
     },
     {
-      label: "권역 기준점",
-      value: "시먼딩 / 싼충 / 린커우",
-      note: "사용자가 준 지도 좌표를 기준으로 하루 권역을 나눴습니다. 첫째 날은 완화, 둘째 날은 싼충과 다다오청, 셋째 날은 린커우 축입니다.",
+      label: "여행 속도",
+      value: "저강도 커플 일정",
+      note: "하루에 메인 권역 하나만 두고, 중간에 카페나 호텔 휴식을 반드시 끼워 넣는 구성입니다. 많이 보기보다 끝까지 무너지지 않는 쪽에 맞췄습니다.",
     },
     {
-      label: "예산 감각",
-      value: "1인 약 75만~170만원",
-      note: "항공, 3박 숙소, 현지 식비, 교통 포함 기준입니다. 환율은 1 TWD 약 45 KRW 안팎으로 계산했습니다.",
+      label: "컨디션 원칙",
+      value: "2-3시간마다 식사 또는 휴식",
+      note: "당뇨, 공황, ADHD, 무릎 통증, 위장 이슈를 같이 고려해 공복과 장시간 대기, 긴 보행을 피하는 흐름으로 짰습니다.",
     },
     {
-      label: "문체 원칙",
-      value: "한국어 설명 + 영어 표기",
-      note: "이 페이지는 한국인을 위한 가이드라서 중국어 표기는 넣지 않았고, 현장 검색용으로만 영어 명칭을 병기했습니다.",
+      label: "비상 거점",
+      value: "호텔 프런트 + Zhongxing Branch",
+      note: "호텔에서 가까운 대형 병원 축을 기준으로 비상 동선을 잡았습니다. 급하면 119, 분실과 도난은 110으로 바로 연결합니다.",
     },
   ],
   itinerary: [
     {
-      dayIndex: "Day 1",
-      title: "시먼딩 체크인 + 완화 올드타운 워밍업",
+      dayIndex: "Day 1 | 3/13 Fri",
+      title: "새벽 도착 후 회복 중심: 호텔 적응 + 다다오청 + 닝샤",
       summary:
-        "첫째 날 좌표는 시먼딩 한복판입니다. 입국 직후 무리하게 명소를 많이 넣지 말고, 시먼딩에 짐을 풀고 완화 올드타운만 한 바퀴 도는 편이 체력과 몰입감 둘 다 좋습니다.",
-      mapUrl:
-        "https://www.google.com/maps/@25.0433721,121.5077092,15z/data=!4m2!11m1!2svQ2Px46INdlCQ3Fr6XCWdw?entry=ttu",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/%E5%BE%9E%E5%B1%88%E8%87%A3%E6%B0%8F%E8%A5%BF%E9%96%80%E9%96%80%E5%B8%82%E5%88%B0%E9%8C%A2%E6%AB%83%E5%8F%B0%E5%8C%97%E4%B8%AD%E8%8F%AF%E6%96%B0%E9%A4%A8_20211204.jpg/1200px-%E5%BE%9E%E5%B1%88%E8%87%A3%E6%B0%8F%E8%A5%BF%E9%96%80%E9%96%80%E5%B8%82%E5%88%B0%E9%8C%A2%E6%AB%83%E5%8F%B0%E5%8C%97%E4%B8%AD%E8%8F%AF%E6%96%B0%E9%A4%A8_20211204.jpg",
-      imageAlt: "시먼딩 거리 풍경",
-      tags: ["시먼딩", "완화", "첫날 저강도", "야간 쇼핑"],
-      stops: [
-        {
-          time: "13:00-15:00",
-          title: "타오위안 공항 도착 -> Airport MRT로 시내 진입",
-          description:
-            "공항에서 EasyCard와 eSIM 또는 유심을 정리한 뒤 Express 열차로 A1 Taipei Main까지 이동합니다. 공항철도 구간 자체는 약 35분대라 빠르지만, 수하물 찾기와 환승까지 합치면 시먼딩 체크인까지는 1시간 30분 정도로 잡는 편이 안전합니다.",
-        },
-        {
-          time: "15:20-16:20",
-          title: "시먼딩 숙소 체크인 + The Red House 주변 적응",
-          description:
-            "첫 좌표가 시먼딩 중심이라 숙소를 이 권역에 두면 동선이 가장 안정적입니다. The Red House 주변은 골목 분위기 파악과 첫 환전에 좋고, 밤에 다시 돌아오기도 쉬워서 첫 산책 코스로 적합합니다.",
-        },
-        {
-          time: "16:40-18:20",
-          title: "Bopiliao Historic Block -> Mengjia Longshan Temple",
-          description:
-            "도보만으로 버거우면 택시 10분 내외로 내려가세요. Bopiliao는 붉은 벽돌 골목과 아케이드가 남아 있어 사진이 잘 나오고, 이어지는 Longshan Temple은 타이베이 남서부의 오래된 분위기를 가장 압축해서 보여줍니다.",
-        },
-        {
-          time: "18:30-20:00",
-          title: "Huaxi Street 저녁: Wang's Broth 또는 Yuan Fang Guabao",
-          description:
-            "Longshan Temple 근처에서 저녁을 먹고 돌아오는 루트가 가장 매끈합니다. Wang's Broth는 따뜻한 국물과 브레이즈드 포크 조합이 강점이고, Yuan Fang Guabao는 한 끼를 너무 무겁게 먹기 싫을 때 적합합니다.",
-        },
-        {
-          time: "20:20-22:30",
-          title: "시먼딩 야간 산책 + 기념품 쇼핑 + 길거리 간식",
-          description:
-            "Ximending은 밤이 되어야 진짜 밀도가 올라갑니다. 화장품, 편집숍, 드럭스토어, 캐릭터 굿즈를 한 번에 처리하고, 간식은 Ay-Chung Flour-Rice Noodle처럼 줄이 빠르게 빠지는 집으로 짧게 끊는 편이 첫날 리듬에 맞습니다.",
-        },
-      ],
-    },
-    {
-      dayIndex: "Day 2",
-      title: "싼충 강변 + 다다오청 + 닝샤 야시장",
-      summary:
-        "둘째 날 좌표는 싼충구입니다. 아침은 강변 공원으로 가볍게 시작하고, 이후 Taipei Bridge를 넘어 Dihua Street와 Dadaocheng으로 이어지면 신베이와 타이베이의 결이 하루 안에 자연스럽게 연결됩니다.",
+        "첫날의 목표는 관광을 많이 하는 것이 아니라 밤샘 비행으로 깨진 몸 상태를 정상 범위로 되돌리는 것입니다. 호텔이 Ningxia Night Market 앞이라 멀리 가지 않아도 첫날 밀도를 충분히 만들 수 있습니다.",
       mapUrl:
         "https://www.google.com/maps/@25.0821031,121.4965931,13z/data=!4m2!11m1!2sGD2U7aCIVXxtcnt6ViJJLA?entry=ttu",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Buildings_along_Dihua_Street_07.23_%282%29.jpg/1200px-Buildings_along_Dihua_Street_07.23_%282%29.jpg",
-      imageAlt: "다다오청과 디화제 거리 풍경",
-      tags: ["싼충", "다다오청", "강변 노을", "야시장"],
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Ningxia_Night_Market_20250520.jpg/1200px-Ningxia_Night_Market_20250520.jpg",
+      imageAlt: "닝샤 야시장 전경",
+      tags: ["새벽 도착", "호텔 중심", "저강도", "커플 산책"],
       stops: [
         {
-          time: "09:00-10:20",
-          title: "New Taipei Metropolitan Park 산책",
+          time: "00:30-02:10",
+          title: "타오위안 도착 -> 픽업 차량 -> 호텔 체크인",
           description:
-            "둘째 날은 아침 공기 좋을 때 강변 공원부터 여는 편이 좋습니다. 공원이 넓어서 전부 돌 생각보다, 1시간 남짓 산책하며 몸을 푸는 정도로 끊고 다음 동선으로 넘어가는 것이 일정 전체 밸런스에 맞습니다.",
+            "입국 픽업이 잡혀 있으니 공항에서 긴 동선을 만들 필요가 없습니다. 수하물과 유심 정리만 끝내고 바로 차량에 타서 호텔로 이동하는 것이 최우선입니다. 오늘 새벽은 관광이 아니라 수면 확보가 목적입니다.",
         },
         {
-          time: "11:00-13:00",
-          title: "Taipei Bridge 건너기 -> Dihua Street 브런치와 쇼핑",
+          time: "02:10-10:30",
+          title: "숙면 확보",
           description:
-            "싼충 쪽 로컬 무드에서 Dadaocheng 상업지구로 넘어가는 전환 구간입니다. Dihua Street는 말린 과일, 차, 포장 선물, 생활 잡화가 밀집해 있어 한국으로 가져갈 소소한 기념품을 이때 정리해 두면 마지막 날이 훨씬 편합니다.",
+            "체크인 후에는 알람을 여러 번 나눠 두지 말고, 한 번에 충분히 자는 편이 ADHD와 공황, 위장 컨디션 모두에 낫습니다. 커튼을 치고 방을 최대한 조용하게 유지하세요.",
         },
         {
-          time: "13:10-14:00",
-          title: "Taipei Xia-Hai City God Temple 짧은 방문",
+          time: "11:00-12:30",
+          title: "호텔 근처 늦은 브런치 + 약 복용 체크",
           description:
-            "Dihua Street 안쪽에 있어 동선이 거의 늘어나지 않습니다. 내부 체류 시간은 길지 않지만, 오래된 상업지구의 신앙 공간을 보는 재미가 있어 다다오청 이해도가 확 올라갑니다.",
+            "첫 식사는 호텔 근처에서 아주 가볍게 시작하는 편이 안전합니다. 공복이 길어지면 혈당과 위장 컨디션이 동시에 흔들릴 수 있으니, 식사 전에 오늘 약과 간식 키트를 챙겼는지 서로 확인하는 루틴을 넣으세요.",
         },
         {
-          time: "14:10-16:20",
-          title: "카페 휴식 또는 찻집 체류",
+          time: "13:00-15:00",
+          title: "Dihua Street 짧은 산책 + Taipei Xia-Hai City God Temple",
           description:
-            "둘째 날은 걷는 시간이 길어질 수 있으니 중간 휴식이 중요합니다. 다다오청 안쪽에서 차나 커피를 한 번 넣고, 선물 쇼핑이 남아 있으면 이 구간에서 마무리하세요.",
+            "호텔에서 비교적 접근이 쉬워 첫날용으로 적합합니다. 오래 걷기보다 예쁜 골목 두세 블록만 보고, 힘들면 바로 카페로 빠지는 식으로 운영하세요. 커플 사진은 이 구간이 가장 자연스럽게 나옵니다.",
         },
         {
-          time: "16:40-18:00",
-          title: "Dadaocheng Wharf 노을 보기",
+          time: "15:00-16:30",
+          title: "카페 또는 호텔 복귀 휴식",
           description:
-            "강가 바람이 불고 일몰 색감이 좋아서 둘째 날 하이라이트로 넣기 좋습니다. 자전거를 타지 않아도 강변 산책만으로 충분하고, 사진은 해가 완전히 떨어지기 전 30분 정도가 가장 안정적으로 나옵니다.",
+            "첫날의 핵심 버퍼입니다. 무릎 컨디션이나 멍한 느낌이 올라오면 미련 없이 호텔로 돌아가 1시간 정도 눕는 편이 저녁 만족도를 살립니다.",
         },
         {
-          time: "18:20-20:30",
+          time: "17:00-18:20",
+          title: "Dadaocheng Wharf 일몰 산책",
+          description:
+            "강변은 개방감이 있어 과자극이 덜하고, 커플 여행 분위기를 만들기 좋습니다. 다만 바람이 불고 보행 거리가 길어질 수 있으니 사진 몇 장 찍고 바로 택시로 돌아오는 식이 더 효율적입니다.",
+        },
+        {
+          time: "18:40-20:10",
           title: "Ningxia Night Market 저녁",
           description:
-            "푸드 라인이 촘촘하게 몰려 있어 한 끼를 시장 전체로 먹는 방식에 적합합니다. 사람이 가장 몰리기 전인 18시대에 들어가면 회전이 빠르고, 굴 오믈렛이나 토란 디저트처럼 대표 메뉴를 두세 개만 골라 담아도 만족도가 높습니다.",
+            "오늘은 호텔 앞이라는 위치가 가장 큰 장점입니다. 줄이 너무 긴 집은 과감히 버리고, 두 사람 모두 부담이 적은 메뉴를 두세 개만 나눠 먹는 쪽이 좋습니다. 과식하지 않고 바로 방으로 올라갈 수 있다는 점이 결정적입니다.",
         },
         {
-          time: "21:00 이후",
-          title: "체력 남으면 Sanhe Night Market 선택",
+          time: "20:10 이후",
+          title: "호텔 귀환과 조기 취침",
           description:
-            "로컬 비중이 더 높은 분위기를 원하면 싼충 쪽으로 다시 넘어가 Sanhe Night Market을 짧게 넣을 수 있습니다. 다만 같은 날 야시장 2곳은 과식으로 이어지기 쉬우니 Ningxia에서 충분히 먹었다면 과감히 생략하는 편이 좋습니다.",
+            "첫날은 야시장 2차를 하지 않는 편이 좋습니다. 샤워, 다음 날 옷 정리, 간식 키트 재정비까지만 하고 바로 쉬세요.",
         },
       ],
     },
     {
-      dayIndex: "Day 3",
-      title: "린커우 회복형 일정 + 쇼핑 + 귀국 준비",
+      dayIndex: "Day 2 | 3/14 Sat",
+      title: "완화 올드타운과 시먼딩: 택시를 섞는 커플 데이트 코스",
       summary:
-        "셋째 날 좌표는 린커우 권역입니다. 도심 관광을 하나 더 욱여넣는 대신 Airport MRT 축으로 이동해 마지막 밤의 체력을 남기고, 쇼핑과 실내 동선을 섞어 귀국 전날답게 리듬을 낮춘 구성이 효율적입니다.",
+        "둘째 날은 타이베이의 오래된 결을 보는 날입니다. Longshan Temple과 Bopiliao, Ximending을 한날에 묶되, 긴 보행 대신 택시나 Uber를 끼워 넣어 무릎과 피로를 관리하는 쪽으로 짰습니다.",
+      mapUrl:
+        "https://www.google.com/maps/@25.0433721,121.5077092,15z/data=!4m2!11m1!2svQ2Px46INdlCQ3Fr6XCWdw?entry=ttu",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Bangka_Lungshan_Temple_07.23.jpg/1200px-Bangka_Lungshan_Temple_07.23.jpg",
+      imageAlt: "Longshan Temple 전경",
+      tags: ["완화", "시먼딩", "택시 추천", "사진 스팟"],
+      stops: [
+        {
+          time: "10:30-11:30",
+          title: "느린 출발과 브런치",
+          description:
+            "토요일은 사람도 많고 자극도 큽니다. 무리해서 아침 일찍 나가지 말고, 호텔 근처에서 늦게 출발해 하루 전체를 안정시키는 편이 낫습니다.",
+        },
+        {
+          time: "11:40-12:10",
+          title: "택시 또는 Uber로 Longshan Temple 이동",
+          description:
+            "대중교통으로도 갈 수 있지만, 오늘은 환승 피로보다 컨디션 유지가 더 중요합니다. 택시 10분 안팎 구간을 과감하게 쓰는 것이 전체 효율이 좋습니다.",
+        },
+        {
+          time: "12:10-13:00",
+          title: "Mengjia Longshan Temple",
+          description:
+            "둘이 같이 천천히 보고, 오래 서 있지 않는 것이 중요합니다. 건물 내부를 다 보겠다는 생각보다 핵심 구역만 보고 나오는 편이 더 좋습니다.",
+        },
+        {
+          time: "13:05-14:00",
+          title: "Bopiliao Historic Block",
+          description:
+            "붉은 벽돌과 아케이드가 이어져 사진 포인트가 좋고, 실외지만 속도를 느리게 가져가기 쉽습니다. 다만 바닥이 고르지 않은 곳이 있어 무릎이 불편하면 구간을 짧게 잘라 보세요.",
+        },
+        {
+          time: "14:00-15:10",
+          title: "점심: Wang's Broth 또는 Yuan Fang Guabao",
+          description:
+            "오늘은 관광보다 식사 타이밍이 더 중요합니다. 줄이 길면 즉시 가벼운 대체 메뉴로 바꾸고, 한 명이 줄을 서는 동안 다른 한 명은 앉아 대기하는 역할 분담을 하세요.",
+        },
+        {
+          time: "15:30-17:10",
+          title: "Ximending + The Red House",
+          description:
+            "사람이 많아 과자극이 쉽게 올라올 수 있으니, 골목 전체를 다 보기보다 Red House 주변과 메인 거리만 짧게 즐기는 편이 좋습니다. 둘이 같이 포토 스팟을 보고 바로 카페나 택시로 빠질 수 있게 움직이세요.",
+        },
+        {
+          time: "17:20-18:20",
+          title: "카페 또는 디저트 휴식",
+          description:
+            "이 시간대를 쉬어야 저녁 이후 컨디션이 남습니다. ADHD와 공황 모두 자극을 한 번 식히는 시간이 중요하고, 위장에도 이 휴식 구간이 도움이 됩니다.",
+        },
+        {
+          time: "19:00 이후",
+          title: "호텔 복귀 후 Ningxia 재방문 또는 객실 휴식",
+          description:
+            "토요일 밤 시먼딩을 길게 끌기보다는 숙소 근처로 돌아와 마무리하는 편이 안정적입니다. 체력이 남으면 Ningxia를 짧게 한 번 더 보고, 아니면 방에서 쉬세요.",
+        },
+      ],
+    },
+    {
+      dayIndex: "Day 3 | 3/15 Sun",
+      title: "컨디션 따라 선택: Linkou 반나절 또는 호텔 중심 회복 + 22:00 샌딩",
+      summary:
+        "오늘은 오후와 밤의 여유가 핵심입니다. 22:00 출국 샌딩이 예약돼 있으므로, 낮 일정은 어디까지나 옵션입니다. 아침 컨디션이 70점 미만이면 Linkou는 바로 접고 호텔 주변 회복 코스로 바꾸는 것이 맞습니다.",
       mapUrl:
         "https://www.google.com/maps/@25.1133753,121.3846755,12z/data=!4m2!11m1!2s-FueY7f1ubMLds77PsglGw?entry=ttu",
       image:
         "https://newtaipei.travel/content/images/attractions/38856/1920x1080_attractions-image-98jk2kap-ee872ss25z8aq.jpg",
       imageAlt: "Mitsui Outlet Park Linkou 전경",
-      tags: ["린커우", "공항철도", "쇼핑", "귀국 전날"],
+      tags: ["선택형 일정", "린커우", "심야 출국", "버퍼 확보"],
       stops: [
         {
-          time: "10:00-10:40",
-          title: "Airport MRT로 A9 Linkou 이동",
+          time: "10:30-11:30",
+          title: "컨디션 체크 회의",
           description:
-            "타이베이 메인역 또는 A1 Taipei Main에서 출발하면 공항철도 축으로 쉽게 붙습니다. 공항 접근 동선을 미리 경험하는 날이라 생각하면 마지막 날 심리적 부담이 많이 줄어듭니다.",
+            "둘 중 한 명이라도 피로, 혈당 흔들림, 위장 통증, 무릎 통증, 멍한 느낌이 크면 오늘은 근교 이동을 버리는 것이 맞습니다. 이 하루는 관광 성과보다 밤 22:00까지 안정적으로 유지되는 것이 더 중요합니다.",
         },
         {
-          time: "10:40-13:30",
-          title: "Mitsui Outlet Park Linkou 쇼핑과 커피",
+          time: "Plan A | 12:00-16:30",
+          title: "Linkou 반나절: Mitsui Outlet Park + The Eatery",
           description:
-            "린커우의 메인 체류지는 사실상 이곳입니다. 대형 브랜드 쇼핑보다도, 마지막 선물과 운동화, 생활용품을 한 번에 정리하기 좋고 실내외가 섞여 있어서 날씨 영향을 덜 받습니다.",
+            "컨디션이 괜찮다면 Airport MRT 축으로 Linkou에 다녀올 수 있습니다. 쇼핑과 카페, 앉을 자리 확보가 쉬워 실내 위주의 반나절 일정으로는 꽤 좋은 카드입니다. 다만 16시대에는 반드시 회차를 시작하세요.",
         },
         {
-          time: "13:30-14:50",
-          title: "The Eatery 또는 아울렛 내 점심",
+          time: "Plan B | 12:00-16:30",
+          title: "호텔 중심 회복: Dadaocheng 카페 + 객실 휴식",
           description:
-            "쇼핑 중간 식사는 안전하게 가져가는 편이 좋습니다. 일정이 늘어지면 The Eatery처럼 좌석이 안정적인 곳이 유리하고, 시간을 아끼고 싶으면 아울렛 안에서 바로 해결해도 무방합니다.",
+            "피곤하면 이 플랜이 정답입니다. 멀리 가지 말고 호텔 주변에서 브런치, 카페, 짧은 쇼핑만 하고 객실로 돌아와 쉬세요. 심야 출국 전에는 씻고 옷 갈아입을 시간이 넉넉한 편이 심리적으로도 훨씬 낫습니다.",
         },
         {
-          time: "15:10-16:10",
-          title: "Zhulinshan Guanyin Temple",
+          time: "17:00-18:30",
+          title: "이른 저녁과 짐 정리",
           description:
-            "린커우에서 완전히 쇼핑 일색으로 끝내기 아쉬울 때 넣기 좋은 포인트입니다. 장식 밀도가 높고 사진 포인트가 분명해서 체류 시간은 짧아도 기억에 남는 구간이 됩니다.",
+            "공항에서 야식을 기대하기보다, 도심에서 위에 덜 부담되는 이른 저녁을 먹고 가는 편이 낫습니다. 이후에는 여권, 지갑, 처방약, 충전기, 보조배터리, 당 보충 간식을 한 번에 꺼낼 수 있도록 재배치하세요.",
         },
         {
-          time: "16:30-18:00",
-          title: "National Archives 또는 실내 카페 휴식",
+          time: "18:30-21:00",
+          title: "객실 샤워와 공항 모드 전환",
           description:
-            "비가 오거나 너무 피곤하면 이 구간은 실내 대체 동선으로 생각하면 됩니다. 마지막 밤은 무리해서 명소를 더 넣기보다 짐 정리와 면세 구매 리스트 확인 시간을 확보하는 편이 훨씬 낫습니다.",
+            "오늘 밤은 다시 밤샘 비행 모드로 바뀌는 날입니다. 두 사람 모두 자극이 적은 환경에서 쉬고, 샌딩 차량 정보와 비행편을 서로 확인하세요. 호텔 프런트에 22:00 차량이 잡혀 있다는 것도 다시 확인해 두면 마음이 편합니다.",
         },
         {
-          time: "18:30 이후",
-          title: "숙소 복귀와 짐 정리",
+          time: "22:00",
+          title: "호텔 출발 -> 공항 샌딩",
           description:
-            "다음 날이 이른 비행이면 이 날 밤 숙소를 A8 Chang Gung Memorial Hospital 또는 A9 Linkou로 옮기는 선택지가 강합니다. 반대로 오후 출국이면 시내 숙소를 유지하고 돌아와도 무리가 없습니다.",
+            "차량이 늦으면 객실에서 기다리지 말고 바로 프런트에 내려가 확인하세요. 이미 예약이 되어 있으니 현장 택시를 다시 잡기보다 호텔과 기사 쪽을 먼저 연결하는 것이 순서입니다.",
         },
       ],
     },
     {
-      dayIndex: "Day 4",
-      title: "귀국일: 마지막 한 끼와 공항 이동",
+      dayIndex: "Day 4 | 3/16 Mon",
+      title: "새벽 출국 루틴",
       summary:
-        "귀국일은 명소를 넣기보다 리스크를 지우는 날입니다. 체크아웃, 공항철도, 수하물, 면세 대기 시간을 반영하면 실제 자유시간은 생각보다 길지 않으니, 마지막 한 끼만 확실하게 챙기는 편이 낫습니다.",
-      mapUrl: "https://www.tymetro.com.tw/tymetro-new/en/index.php",
+        "이 날은 관광일이 아니라 귀국 처리일입니다. 3월 16일 월요일 01:55 출발편 기준으로, 공항에서는 줄과 동선을 단순하게 처리하는 것이 중요합니다.",
+      mapUrl: "https://www.taoyuan-airport.com/?lang=en",
       image:
         "https://newtaipei.travel/content/images/shops/16112/1024x768_a7da26ce-7faf-456b-9cb6-5858dfd5adbe.jpg",
       imageAlt: "출국 전 마지막 식사 예시 이미지",
-      tags: ["체크아웃", "Airport MRT", "수하물 여유", "마지막 쇼핑"],
+      tags: ["새벽 출국", "수하물", "약/간식 확인", "귀국"],
       stops: [
         {
-          time: "출발 4-4.5시간 전",
-          title: "호텔 체크아웃과 짐 정리 완료",
+          time: "22:50-23:40",
+          title: "공항 도착과 체크인",
           description:
-            "시내 숙소면 공항철도역 이동과 수하물 드래그 시간이 더 들어가므로 4시간 이상 여유를 두는 편이 맞습니다. 린커우나 A8 쪽 숙소면 공항 접근이 쉬워 30분 정도 더 여유가 생깁니다.",
+            "심야 시간대라도 수속 줄이 생길 수 있습니다. 수하물 무게를 다시 맞추고, 액체류와 처방약을 꺼내기 쉬운 위치에 두세요.",
         },
         {
-          time: "출발 3-3.5시간 전",
-          title: "Airport MRT 탑승",
+          time: "23:40-00:40",
+          title: "보안검색과 출국 심사",
           description:
-            "Taipei Main 출발이면 역 내부 동선이 길어 생각보다 시간이 빨리 갑니다. 표를 다시 끊기보다 EasyCard 잔액을 확인하고 바로 들어가는 편이 가장 단순합니다.",
+            "공황이 올라오기 쉬운 구간이라 한 명이 앞장서기보다, 둘이 같은 속도로 천천히 움직이는 편이 좋습니다. 한 명이 서류를 관리하면 다른 한 명은 짐과 컨디션 체크에 집중하는 식으로 역할을 나누세요.",
         },
         {
-          time: "출발 2.5시간 전",
-          title: "체크인, 수하물, 보안검색",
+          time: "00:40-01:30",
+          title: "탑승 전 마지막 정리",
           description:
-            "3박 4일 일정은 쇼핑품과 간식이 늘어나기 쉬워 수하물 정리 시간이 꽤 걸립니다. 올 때보다 짐이 무거워질 확률이 높으니, 셋째 날 밤에 이미 가방 배치를 끝내 두는 것이 좋습니다.",
-        },
-        {
-          time: "남는 시간",
-          title: "공항 또는 도심 마지막 소비",
-          description:
-            "오후 출국이라 도심 여유가 남는 경우에는 Taipei Main Underground Mall이나 시먼딩에서 마지막 쇼핑을 짧게 끝내고 이동하세요. 아침 비행이면 무리해서 도시 일정을 추가하지 않는 편이 전체 만족도가 높습니다.",
+            "탑승구 근처에서 물, 가벼운 간식, 화장실을 미리 처리하세요. 탑승 직전에 급하게 움직이지 않아도 되도록, 약 복용 시간과 좌석 주변 정리를 미리 끝내 두는 편이 낫습니다.",
         },
       ],
     },
@@ -227,155 +245,191 @@ const guidebookData = {
   food: [
     {
       type: "첫날 저녁",
+      name: "Ningxia Night Market",
+      description:
+        "호텔 바로 앞이라는 위치가 압도적 장점입니다. 첫날은 줄이 아주 긴 집보다 바로 먹고 바로 올라갈 수 있는 메뉴를 고르는 편이 훨씬 좋습니다. 둘이 한 번에 많이 먹지 말고 여러 메뉴를 나눠 드세요.",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Ningxia_Night_Market_20250520.jpg/1200px-Ningxia_Night_Market_20250520.jpg",
+      imageAlt: "Ningxia Night Market 전경",
+      meta: ["호텔 바로 앞", "첫날 최적", "과식 금지", "현금 준비"],
+    },
+    {
+      type: "둘째 날 안정형 점심",
       name: "Wang's Broth",
       description:
-        "Longshan Temple 근처에서 바로 이어 먹기 좋은 집입니다. 미쉐린 Bib Gourmand 2025 기준으로 소개되고 있고, 따뜻한 국물과 브레이즈드 포크 계열이 강해서 첫날 저녁에 실패 확률이 낮습니다.",
+        "Longshan Temple 권역과 자연스럽게 묶입니다. 국물과 돼지고기 조합이라 뜨겁고 자극적인 음식을 피하고 싶을 때 비교적 안정적으로 접근할 수 있습니다. 미쉐린 Bib Gourmand 2025 소개 매장입니다.",
       image:
         "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/5b9ea75825ef403aa2dc62be90cdcc6b.jpg?width=1000",
       imageAlt: "Wang's Broth 대표 이미지",
-      meta: ["완화", "1인 100-250 TWD", "MICHELIN Bib 2025", "Longshan Temple 인접"],
+      meta: ["완화", "MICHELIN Bib 2025", "좌석 상황 확인", "점심 추천"],
     },
     {
-      type: "첫날 가벼운 추가식",
+      type: "둘째 날 가벼운 대안",
       name: "Yuan Fang Guabao",
       description:
-        "첫날 저녁을 너무 무겁게 먹기 싫을 때 좋은 선택지입니다. 부드러운 번 사이에 졸인 돼지고기가 들어가고, 시장 동선 사이에서 빠르게 먹고 다시 움직이기 좋습니다.",
+        "줄이 길거나 둘 다 무거운 식사가 부담될 때 대체 카드로 좋습니다. 작은 양으로 나눠 먹기 쉬워서 혈당과 위장 컨디션을 보며 속도를 조절하기 좋습니다.",
       image:
         "https://axwwgrkdco.cloudimg.io/v7/__gmpics3__/57ab0defed67482dbdcd9e3558ba57c1.jpeg?width=1000",
       imageAlt: "Yuan Fang Guabao 대표 이미지",
-      meta: ["완화", "1인 80-160 TWD", "MICHELIN Bib 2025", "짧은 체류형"],
+      meta: ["완화", "가벼운 식사", "대기 길면 빠르게 전환", "분식형"],
     },
     {
-      type: "둘째 날 메인 디너",
-      name: "Ningxia Night Market",
-      description:
-        "관광객과 로컬 모두에게 검증된 저녁 카드입니다. 음식 선택지가 좁게 밀집해 있어 여러 메뉴를 짧게 나눠 먹기 좋고, 다다오청에서 넘어오는 흐름이 매우 자연스럽습니다.",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Ningxia_Night_Market_20250520.jpg/1200px-Ningxia_Night_Market_20250520.jpg",
-      imageAlt: "닝샤 야시장 전경",
-      meta: ["다퉁", "1인 200-400 TWD", "현금 유리", "18:30 이전 입장 추천"],
-    },
-    {
-      type: "둘째 날 로컬 옵션",
-      name: "Sanhe Night Market",
-      description:
-        "싼충에 남아 있는 로컬 무드를 더 보고 싶을 때 넣는 보조 카드입니다. 관광지 느낌이 덜하고 실제 생활권 야시장에 가까워, Taipei Bridge 건너기 전후로 취향에 따라 선택하면 됩니다.",
-      image:
-        "https://newtaipei.travel/content/images/attractions/1675/1920x1080_4a49915c-6744-4d0f-aa4b-6b40f2ee6a8c.jpg",
-      imageAlt: "산허 야시장 전경",
-      meta: ["싼충", "1인 150-300 TWD", "로컬 비중 높음", "야식용 적합"],
-    },
-    {
-      type: "셋째 날 안정형 식사",
+      type: "셋째 날 Linkou 플랜",
       name: "The Eatery",
       description:
-        "린커우 일정의 핵심은 마지막 날 컨디션을 남기는 것입니다. The Eatery는 좌석, 동선, 청결도가 안정적이라 피곤한 저녁에 가장 무난한 선택이고, 우천 시 대체 카드로도 좋습니다.",
+        "실내 좌석과 동선이 안정적이라 컨디션을 지키기 좋은 카드입니다. 쇼핑과 저녁을 같은 권역에서 해결할 수 있어 저녁 이후 짐 정리 시간이 필요한 날에 특히 유리합니다.",
       image:
         "https://newtaipei.travel/content/images/shops/16112/1024x768_a7da26ce-7faf-456b-9cb6-5858dfd5adbe.jpg",
       imageAlt: "The Eatery 대표 이미지",
-      meta: ["린커우", "예산 중상", "실내 좌석 안정적", "마지막 밤 추천"],
+      meta: ["Linkou", "앉아서 쉬기 좋음", "심야 출국 전날", "실내"],
     },
     {
-      type: "셋째 날 디저트",
+      type: "셋째 날 가벼운 간식",
       name: "Linkou Power Plant popsicles",
       description:
-        "린커우 쪽에서 너무 무겁지 않은 간식을 원할 때 좋은 선택입니다. 이름과 분위기가 독특해서 짧게 들르기 좋고, 한낮 더위를 식히는 용도로도 효율적입니다.",
+        "더위나 피로가 올라왔을 때 짧게 리셋하기 좋은 카드입니다. 큰 식사 대신 가볍게 끊어 가기 좋고, 사진도 남기기 쉬워서 Linkou 반나절 일정의 보조 포인트로 적합합니다.",
       image:
         "https://newtaipei.travel/content/images/shops/12597/1024x768_13772bb0111000009450.jpg",
       imageAlt: "Linkou Power Plant popsicles 대표 이미지",
-      meta: ["린커우", "가벼운 간식", "짧은 체류형", "사진 포인트"],
+      meta: ["Linkou", "가벼운 간식", "짧은 체류형", "더위 리셋"],
     },
   ],
   tips: [
     {
-      category: "숙소 전략",
-      title: "시먼딩 2박 + 마지막 밤 선택 전환이 가장 실전적",
+      category: "커플 운영",
+      title: "한 명은 서류와 결제, 한 명은 컨디션 감시 역할로 고정",
       description:
-        "첫째 날과 둘째 날은 시먼딩이나 Taipei Main 권역이 가장 편합니다. 다만 귀국 비행이 이르면 마지막 밤만 A8 또는 A9로 옮기면 공항 이동 스트레스가 크게 줄어듭니다.",
+        "여권, 카드, 예약 정보, 길 찾기까지 두 사람이 동시에 다 잡으려 하면 피로가 급격히 올라갑니다. 여행 내내 역할을 고정해 두면 ADHD와 공황 상황에서도 흐름이 단순해집니다.",
     },
     {
-      category: "교통",
-      title: "Airport MRT는 첫날과 마지막 날 둘 다 축으로 잡기",
+      category: "당뇨",
+      title: "공복 3시간을 넘기지 않는 일정이 핵심",
       description:
-        "이 일정은 Airport MRT를 공항 이동 수단이 아니라 여행 전체의 백본으로 씁니다. 셋째 날 린커우에 미리 가 보는 이유도 마지막 날 동선을 몸으로 익히기 위해서입니다.",
+        "긴 줄을 설 수 있는 곳에서는 먼저 앉을 자리와 대체 메뉴부터 봐 두세요. 늘 드시던 저혈당 대응 간식과 물은 가방 바깥쪽에 넣어, 호텔 방이 아니라 이동 중에도 바로 꺼낼 수 있게 두는 편이 좋습니다.",
     },
     {
-      category: "결제",
-      title: "야시장과 작은 상점은 현금 비중을 더 높게",
+      category: "공황/ADHD",
+      title: "과자극이 올라오면 무조건 조용한 실내로 후퇴",
       description:
-        "카드가 되는 곳이 점점 늘고 있지만 야시장과 오래된 상점은 아직 현금이 편한 경우가 많습니다. 하루 1,000 TWD 안팎의 현금을 따로 빼 두면 식사 때 훨씬 수월합니다.",
+        "Ximending, 야시장, 공항 보안검색 구간은 소리와 사람이 많습니다. 이상 징후가 보이면 설명하려 애쓰기보다 카페, 호텔, 차량 안처럼 자극이 낮은 공간으로 먼저 이동하세요.",
     },
     {
-      category: "먹거리",
-      title: "한 곳에서 배부르게보다 여러 곳을 짧게 끊는 편이 유리",
+      category: "무릎",
+      title: "택시 10분을 아끼지 말기",
       description:
-        "타이베이 여행은 한 끼를 완성형 식당 하나로 끝내기보다, 메인 식사와 간식을 나눠 먹을 때 만족도가 높습니다. 특히 Ximending과 야시장 구간은 이 방식이 더 잘 맞습니다.",
+        "이번 일정은 걷기 좋은 여행이 아니라 무릎을 보호하며 움직이는 여행이어야 합니다. Longshan Temple, Bopiliao, Ximending처럼 구간이 끊기는 곳은 택시를 섞는 편이 훨씬 낫습니다.",
     },
     {
-      category: "우천 대비",
-      title: "비 오면 셋째 날 만족도가 오히려 높아질 수 있음",
+      category: "위장",
+      title: "야시장도 '맛보기 모드'로",
       description:
-        "비 오는 날 도심 골목과 강변은 피로도가 올라가지만, Linkou 아울렛과 실내 식사는 타격이 적습니다. 우천 예보가 강하면 둘째 날과 셋째 날 순서를 바꾸는 것도 충분히 합리적입니다.",
+        "십이지장궤양과 헬리코박터 이력이 있으면 밤에 과하게 기름지거나 매운 음식을 몰아서 먹는 패턴이 가장 위험합니다. 두 분 모두 배가 부를 정도가 아니라, 괜찮은 메뉴를 조금씩 나눠 먹는 식으로 가는 편이 안전합니다.",
     },
     {
-      category: "언어",
-      title: "중국어 없이도 영어 이름과 지도 링크면 충분",
+      category: "숙소 활용",
+      title: "Ningxia 앞 숙소라는 장점을 끝까지 활용",
       description:
-        "기사와 가이드는 한국어로 보되, 현장 검색은 영어 명칭으로 처리하면 됩니다. 택시나 지도 앱에서는 Ximending, Longshan Temple, Dadaocheng Wharf 같은 영어 표기가 가장 실용적입니다.",
+        "체력이 떨어지면 야시장을 포기하는 것이 아니라, 아래층만 짧게 돌고 바로 올라오면 됩니다. 이 위치 덕분에 첫날과 마지막 날이 훨씬 안전해지므로, 멀리 더 보는 욕심보다 숙소 접근성을 우선하세요.",
+    },
+  ],
+  safety: [
+    {
+      category: "병원",
+      title: "심한 통증, 호흡 곤란, 실신 느낌이면 119부터",
+      description:
+        "급성 흉통, 심한 복통, 의식 저하, 호흡 곤란, 쓰러짐이 있으면 호텔에서 버티지 말고 바로 119를 부르거나 프런트에 구급차 요청을 맡기세요. 급하지 않지만 진료가 필요하면 Taipei City Hospital Zhongxing Branch를 가장 먼저 생각하면 됩니다.",
+      actions: [
+        "119에 연결하거나 호텔 프런트에 'ambulance' 또는 병원 택시 요청을 바로 맡긴다.",
+        "여권, 여행자보험 정보, 복용 중인 약, 알레르기, 마지막 식사 시간을 한 장 메모나 휴대폰 노트로 보여준다.",
+        "중흥병원 대표번호는 +886-2-2555-3000, Taipei City 1999 고객센터의 외국어 서비스는 1999 후 내선 888이다.",
+        "숙소에서 더 멀어도 국제 진료 접근성이 더 편하면 Mackay Memorial Hospital(+886-2-2543-3535)을 백업 병원으로 둔다.",
+      ],
+    },
+    {
+      category: "급격한 컨디션 저하",
+      title: "혈당 흔들림, 공황, 위장 악화는 '설명보다 정지'가 먼저",
+      description:
+        "두 분 모두 갑자기 상태가 내려갈 수 있으니, 원인을 바로 분석하려 하지 말고 먼저 앉거나 눕는 공간을 확보하는 편이 맞습니다. 이동 중이면 편의점, 카페, 호텔, 차량 안이 우선 대피처입니다.",
+      actions: [
+        "기존에 하던 개인 대응 루틴대로 간식, 물, 복용약을 먼저 사용하고, 새로 실험하는 음식이나 음료는 피한다.",
+        "한 명이 상태가 흔들리면 다른 한 명은 길 찾기와 결제를 중단하고 좌석, 화장실, 조용한 공간 확보에만 집중한다.",
+        "20-30분 안에 회복이 안 되거나 의식이 흐려지면 119나 병원 이동으로 바로 전환한다.",
+        "야시장이나 공항 줄에서는 끝까지 버티지 말고 바로 이탈한다. 다시 합류하는 편이 훨씬 쉽다.",
+      ],
+    },
+    {
+      category: "도난/분실",
+      title: "여권, 지갑, 휴대폰 분실 시 순서를 미리 고정",
+      description:
+        "심야 시간대나 혼잡한 시장에서는 분실 후 머리가 하얘지기 쉽습니다. 그래서 순서를 정해 두는 것이 중요합니다. 카드 정지, 위치 추적, 경찰 신고, 영사관 연락 순으로 밀어붙이면 됩니다.",
+      actions: [
+        "휴대폰 분실은 먼저 Find My Device 또는 Find My iPhone으로 위치를 확인하고, 불가능하면 원격 잠금부터 건다.",
+        "카드와 지갑 분실은 카드사 앱이나 국제전화로 즉시 정지하고, 현지 신고용으로 110에 연락한다.",
+        "도난 신고서나 분실 확인서는 여행자보험 청구와 여권 재발급에 필요하므로 꼭 받아 둔다.",
+        "주타이베이 대한민국 대표부 연락처는 +886-2-2758-8320, 이메일은 taipei@mofa.go.kr 이다.",
+      ],
+    },
+    {
+      category: "심야 공항",
+      title: "샌딩 차량 문제는 공항보다 호텔 프런트가 먼저",
+      description:
+        "3월 15일 일요일 22:00 샌딩은 이미 예약되어 있으니, 기사 연락이 잠시 늦어도 현장 택시를 새로 잡기보다 호텔 프런트에서 예약 업체와 먼저 연결하는 편이 정확합니다. 심야 이동은 혼자 판단하지 않는 것이 좋습니다.",
+      actions: [
+        "21:30 전후로 호텔 프런트에 샌딩 예약을 다시 한 번 상기시킨다.",
+        "22:00가 넘어도 차량이 안 보이면 프런트에서 기사와 업체에 즉시 전화하게 한다.",
+        "공항에 도착한 뒤 혼란이 생기면 터미널 관광안내센터를 찾는다. Terminal 1은 +886-3-398-2194, Terminal 2는 +886-3-398-3341이다.",
+        "호객 택시나 신원을 알 수 없는 권유는 받지 않고, 반드시 호텔 또는 공항 공식 창구를 통한다.",
+      ],
+    },
+    {
+      category: "플랜B",
+      title: "비, 피로, 통증이 오면 Day 3는 즉시 호텔 중심 플랜으로",
+      description:
+        "이번 여행은 대체 일정이 쉬워야 성공입니다. 다행히 숙소 위치가 좋아서 계획을 줄여도 여행이 무너지지 않습니다. 많이 본 날보다 끝까지 편하게 버틴 날이 결과적으로 더 좋은 날이 됩니다.",
+      actions: [
+        "Linkou 플랜을 취소하고 호텔 근처 브런치, Dihua Street 한 블록, 카페, 객실 휴식으로 낮 일정을 재편한다.",
+        "저녁은 Ningxia에서 가볍게 먹고 바로 올라와 샤워와 짐 정리에 집중한다.",
+        "사진이나 쇼핑 욕심보다 수면, 식사, 약 복용 시간 확보를 우선한다.",
+        "둘 중 한 명이 취소를 말하면 설득하지 말고 바로 축소 모드로 전환한다.",
+      ],
     },
   ],
   budget: [
     {
       tier: "가볍게",
-      total: "약 75만-90만원",
+      total: "약 80만-95만원",
       breakdown: [
         { label: "항공", value: "22만-30만원" },
-        { label: "숙소 3박", value: "24만-33만원" },
+        { label: "숙소 3박", value: "28만-36만원" },
         { label: "식비", value: "12만-16만원" },
-        { label: "교통/통신", value: "4만-6만원" },
-        { label: "간식/입장", value: "5만원 내외" },
+        { label: "현지 교통", value: "3만-5만원" },
+        { label: "간식/카페", value: "5만-8만원" },
       ],
     },
     {
       tier: "표준",
-      total: "약 100만-125만원",
+      total: "약 105만-130만원",
       breakdown: [
         { label: "항공", value: "28만-40만원" },
-        { label: "숙소 3박", value: "33만-48만원" },
-        { label: "식비", value: "18만-25만원" },
-        { label: "교통/카페", value: "6만-8만원" },
-        { label: "소규모 쇼핑", value: "10만-15만원" },
+        { label: "숙소 3박", value: "36만-52만원" },
+        { label: "식비", value: "18만-24만원" },
+        { label: "현지 교통", value: "5만-8만원" },
+        { label: "쇼핑/카페", value: "12만-18만원" },
       ],
     },
     {
       tier: "여유롭게",
-      total: "약 135만-170만원",
+      total: "약 140만-175만원",
       breakdown: [
         { label: "항공", value: "35만-50만원" },
-        { label: "숙소 3박", value: "48만-75만원" },
+        { label: "숙소 3박", value: "52만-78만원" },
         { label: "식비", value: "25만-35만원" },
-        { label: "교통/택시", value: "8만-12만원" },
-        { label: "쇼핑/마사지", value: "20만-35만원" },
+        { label: "현지 교통", value: "8만-12만원" },
+        { label: "쇼핑/예비비", value: "20만-30만원" },
       ],
     },
   ],
   sources: [
-    {
-      label: "Taipei Travel - Ximending",
-      url: "https://www.travel.taipei/en/attraction/details/1694",
-    },
-    {
-      label: "Taipei Travel - The Red House",
-      url: "https://www.travel.taipei/en/attraction/details/503",
-    },
-    {
-      label: "Taipei Travel - Longshan Temple",
-      url: "https://www.travel.taipei/en/attraction/details/487",
-    },
-    {
-      label: "Taipei Travel - Bopiliao",
-      url: "https://www.travel.taipei/en/attraction/details/506",
-    },
     {
       label: "Taipei Travel - Dihua Street",
       url: "https://www.travel.taipei/en/attraction/details/1686",
@@ -393,24 +447,24 @@ const guidebookData = {
       url: "https://www.travel.taipei/en/attraction/details/1689",
     },
     {
-      label: "New Taipei Travel - New Taipei Metropolitan Park",
-      url: "https://newtaipei.travel/en/attractions/detail/112088",
+      label: "Taipei Travel - The Red House",
+      url: "https://www.travel.taipei/en/attraction/details/503",
     },
     {
-      label: "New Taipei Travel - Sanhe Night Market",
-      url: "https://newtaipei.travel/en/attractions/detail/402199",
+      label: "Taipei Travel - Longshan Temple",
+      url: "https://www.travel.taipei/en/attraction/details/487",
+    },
+    {
+      label: "Taipei Travel - Bopiliao",
+      url: "https://www.travel.taipei/en/attraction/details/506",
+    },
+    {
+      label: "Taipei Travel - Ximending",
+      url: "https://www.travel.taipei/en/attraction/details/1694",
     },
     {
       label: "New Taipei Travel - Mitsui Outlet Park Linkou",
       url: "https://newtaipei.travel/en/attractions/detail/112984",
-    },
-    {
-      label: "New Taipei Travel - Zhulinshan Guanyin Temple",
-      url: "https://newtaipei.travel/en/attractions/detail/402184",
-    },
-    {
-      label: "New Taipei Travel - National Archives",
-      url: "https://newtaipei.travel/en/attractions/detail/403776",
     },
     {
       label: "New Taipei Travel - The Eatery",
@@ -421,16 +475,40 @@ const guidebookData = {
       url: "https://newtaipei.travel/en/shop/detail/208365",
     },
     {
-      label: "Taoyuan Airport MRT",
-      url: "https://www.tymetro.com.tw/tymetro-new/en/index.php",
-    },
-    {
       label: "MICHELIN - Wang's Broth",
       url: "https://guide.michelin.com/us/en/taipei-region/taipei/restaurant/hsiao-wang-steamed-minced-pork-with-pickles-in-broth",
     },
     {
       label: "MICHELIN - Yuan Fang Guabao",
       url: "https://guide.michelin.com/us/en/taipei-region/taipei/restaurant/yuan-fang-guabao",
+    },
+    {
+      label: "Taipei City - Emergency Contact Numbers",
+      url: "https://english.gov.taipei/News_Content.aspx?n=95D4FF7B2BC6D67C&sms=E8F44BB2D1F11A00&s=E4AAFA9719943D2A",
+    },
+    {
+      label: "Taipei City Hospital - Zhongxing Branch",
+      url: "https://tpech.gov.taipei/mp109081/cp.aspx?n=F43355E71D9EA148",
+    },
+    {
+      label: "Taipei City Hospital - Foreign Language Service",
+      url: "https://english.gov.taipei/News_Content.aspx?n=7A067E251FA6A396&sms=839CCB98D3F7D1B5&s=FC8D1E57CFC13B70",
+    },
+    {
+      label: "Mackay Memorial Hospital",
+      url: "https://www.mmh.org.tw/main.php?lang=en",
+    },
+    {
+      label: "MOFA - Korean Mission in Taipei",
+      url: "https://www.mofa.gov.tw/en/OfficesInROC_Content.aspx?n=169&sms=87&s=66&os=27",
+    },
+    {
+      label: "MOFA - Taiwan Traveler Emergency Numbers",
+      url: "https://www.boca.gov.tw/cp-220-5081-c06dc-2.html",
+    },
+    {
+      label: "Taoyuan Airport - Tourist Service Center",
+      url: "https://www.taoyuan-airport.com/service_facilities/5a0d46f2-0d34-49d0-8078-37b0c91234b9?lang=en",
     },
   ],
 };
@@ -548,6 +626,27 @@ function renderTips() {
   });
 }
 
+function renderSafety() {
+  const container = document.querySelector("#safety-grid");
+  const template = document.querySelector("#safety-card-template");
+
+  guidebookData.safety.forEach((card) => {
+    const fragment = template.content.cloneNode(true);
+    fragment.querySelector(".tip-category").textContent = card.category;
+    fragment.querySelector(".safety-title").textContent = card.title;
+    fragment.querySelector(".tip-description").textContent = card.description;
+
+    const actions = fragment.querySelector(".safety-actions");
+    card.actions.forEach((action) => {
+      const item = document.createElement("li");
+      item.textContent = action;
+      actions.appendChild(item);
+    });
+
+    container.appendChild(fragment);
+  });
+}
+
 function renderBudget() {
   const container = document.querySelector("#budget-cards");
   const template = document.querySelector("#budget-card-template");
@@ -597,6 +696,7 @@ function renderGuidebook() {
   renderItinerary();
   renderFood();
   renderTips();
+  renderSafety();
   renderBudget();
   renderSources();
   initializeImageFallbacks();

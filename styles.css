@@ -227,7 +227,8 @@ main {
 
 .overview-grid,
 .tips-grid,
-.budget-cards {
+.budget-cards,
+.safety-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
@@ -235,7 +236,8 @@ main {
 
 .overview-card,
 .tip-card,
-.budget-card {
+.budget-card,
+.safety-card {
   display: grid;
   gap: 12px;
   padding: 20px;
@@ -388,6 +390,15 @@ main {
   gap: 12px;
 }
 
+.safety-actions {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .footer {
   margin-top: 22px;
   display: flex;
@@ -448,7 +459,8 @@ main {
   .food-card,
   .overview-grid,
   .tips-grid,
-  .budget-cards {
+  .budget-cards,
+  .safety-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -491,6 +503,7 @@ main {
   .overview-grid,
   .tips-grid,
   .budget-cards,
+  .safety-grid,
   .day-card-body {
     grid-template-columns: 1fr;
   }

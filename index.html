@@ -27,6 +27,7 @@
             <a href="#itinerary">일정</a>
             <a href="#food">식당</a>
             <a href="#tips">팁</a>
+            <a href="#safety">위기대응</a>
             <a href="#budget">예산</a>
           </div>
         </nav>
@@ -36,10 +37,10 @@
             <p class="eyebrow">Daegu to Taipei</p>
             <h1>타이베이 3박 4일 가이드북</h1>
             <p class="hero-description">
-              대구 출발 기준으로 짠 3박 4일 타이베이 동선형 가이드입니다.
-              시먼딩, 싼충-다다오청, 린커우를 하루 권역으로 나눠서 이동 피로를
-              줄였고, 외부 이미지가 실패해도 로컬 fallback으로 페이지 완성도가
-              유지되도록 구성했습니다.
+              2026년 3월 13일 금요일 00:30 타오위안 도착, 3월 16일 월요일
+              01:55 출국 일정에 맞춘 저강도 커플 여행 가이드입니다. 숙소가
+              Ningxia Night Market 바로 앞이라 첫날과 마지막 날 무리한 이동을
+              빼고, 컨디션 저하와 돌발 상황까지 대비할 수 있게 구성했습니다.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#itinerary">일정 보기</a>
@@ -67,9 +68,9 @@
             <p class="section-kicker">Overview</p>
             <h2>여행 개요</h2>
             <p>
-              항공 시각이 아직 없어서 1일차 점심 도착, 4일차 오후 또는 저녁
-              출국 기준으로 짰습니다. 새벽 비행이면 마지막 밤 숙소를 A8 또는
-              A9로 옮기는 방식이 가장 안정적입니다.
+              이 일정은 실제 항공편과 숙소를 반영해 다시 짠 버전입니다. 3월
+              13일 새벽 도착 후 바로 쉬고, 3월 15일 밤 22:00 샌딩 차량을 타는
+              조건이라 셋째 날 저녁 이후는 완전히 귀국 모드로 잡았습니다.
             </p>
           </div>
 
@@ -81,8 +82,9 @@
             <p class="section-kicker">Day by Day</p>
             <h2>일자별 동선</h2>
             <p>
-              사용자가 준 지도 좌표를 권역 기준점으로 삼아, 도보와 MRT 환승이
-              무리하지 않도록 하루의 흐름을 재구성했습니다.
+              두 분 모두 컨디션 변수가 큰 일정이므로 오전 출발을 느리게 잡고,
+              오래 서는 동선과 긴 줄 대기를 최대한 줄였습니다. 도보가 길어지는
+              구간은 택시나 Uber로 끊어 이동하는 전제를 깔고 짰습니다.
             </p>
           </div>
 
@@ -94,8 +96,9 @@
             <p class="section-kicker">Food Guide</p>
             <h2>식당 추천</h2>
             <p>
-              한국인 입맛과 동선을 같이 보면서 골랐습니다. 줄 서는 가치가 있는
-              곳과 마지막 밤에 실패 확률이 낮은 곳을 분리해 넣었습니다.
+              공복이 길어지면 컨디션이 급격히 무너질 수 있어, 줄이 너무 길거나
+              식사 시간이 밀리기 쉬운 곳은 일부러 주력 카드에서 뺐습니다. 위에
+              부담이 큰 메뉴는 야식으로 과하게 먹지 않는 전제로 설명했습니다.
             </p>
           </div>
 
@@ -111,14 +114,28 @@
           <div class="tips-grid" id="tips-grid" aria-live="polite"></div>
         </section>
 
+        <section class="section section-safety" id="safety">
+          <div class="section-heading">
+            <p class="section-kicker">Safety</p>
+            <h2>위기 대응</h2>
+            <p>
+              호텔 프런트, 픽업/샌딩 차량, 응급 번호를 적극적으로 쓰는 전제로
+              정리했습니다. 두 사람 중 한 명이 흔들리면 다른 한 명이 바로 읽고
+              실행할 수 있게 최대한 짧고 구체적으로 적었습니다.
+            </p>
+          </div>
+
+          <div class="safety-grid" id="safety-grid" aria-live="polite"></div>
+        </section>
+
         <section class="section section-budget" id="budget">
           <div class="section-heading">
             <p class="section-kicker">Budget</p>
             <h2>예산 가이드</h2>
             <p>
-              항공, 3박 숙소, 식비, 현지 교통을 포함한 1인 기준입니다. 쇼핑은
-              기념품 중심만 넣었고, 대형 쇼핑 계획이 있으면 별도 예산을 더
-              잡는 편이 맞습니다.
+              항공, 3박 숙소, 식비, 현지 교통을 포함한 1인 기준입니다. 이미
+              입국 픽업과 출국 샌딩이 예약된 상태라 공항 왕복 교통비는 일반
+              자유여행보다 조금 더 예측 가능하게 잡았습니다.
             </p>
           </div>
 
@@ -188,6 +205,15 @@
         <p class="tip-category"></p>
         <h3 class="tip-title"></h3>
         <p class="tip-description"></p>
+      </article>
+    </template>
+
+    <template id="safety-card-template">
+      <article class="safety-card">
+        <p class="tip-category"></p>
+        <h3 class="safety-title"></h3>
+        <p class="tip-description"></p>
+        <ul class="safety-actions"></ul>
       </article>
     </template>
 
