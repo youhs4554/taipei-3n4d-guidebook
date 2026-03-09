@@ -141,6 +141,7 @@ p {
   color: var(--muted);
   font-size: 0.95rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -199,6 +200,15 @@ p {
   gap: 8px;
   overflow-x: auto;
   padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.mobile-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-link {
+  flex: 0 0 auto;
 }
 
 .doc-page,
@@ -619,6 +629,12 @@ p {
   .page-title {
     max-width: none;
     font-size: 1.85rem;
+  }
+
+  .mobile-link {
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: 0.88rem;
   }
 
   .thumb-card {
