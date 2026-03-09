@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=SUIT:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=SUIT:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -37,14 +37,12 @@
             <p class="eyebrow">Daegu to Taipei</p>
             <h1>타이베이 3박 4일 가이드북</h1>
             <p class="hero-description">
-              2026년 3월 13일 금요일 00:30 타오위안 도착, 3월 16일 월요일
-              01:55 출국 일정에 맞춘 저강도 커플 여행 가이드입니다. 숙소가
-              Ningxia Night Market 바로 앞이라 첫날과 마지막 날 무리한 이동을
-              빼고, 컨디션 저하와 돌발 상황까지 대비할 수 있게 구성했습니다.
+              늦은 밤 도착과 새벽 출국 사이에 무리하지 않고, 먹고 쉬고
+              이동하는 핵심만 남긴 저강도 커플 일정입니다.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#itinerary">일정 보기</a>
-              <a class="button button-secondary" href="#tips">여행 팁</a>
+              <a class="button button-primary" href="#glance">핵심 보기</a>
+              <a class="button button-secondary" href="#itinerary">세부 일정</a>
             </div>
           </div>
 
@@ -63,14 +61,26 @@
       </header>
 
       <main>
+        <section class="section section-glance" id="glance">
+          <div class="section-heading">
+            <p class="section-kicker">Quick Look</p>
+            <h2>핵심만 보기</h2>
+            <p>
+              출발 전에 다시 훑을 때 바로 보이도록, 실제로 중요한 정보만 먼저
+              모았습니다.
+            </p>
+          </div>
+
+          <div class="glance-grid" id="glance-grid" aria-live="polite"></div>
+        </section>
+
         <section class="section section-overview" id="overview">
           <div class="section-heading">
             <p class="section-kicker">Overview</p>
             <h2>여행 개요</h2>
             <p>
-              이 일정은 실제 항공편과 숙소를 반영해 다시 짠 버전입니다. 3월
-              13일 새벽 도착 후 바로 쉬고, 3월 15일 밤 22:00 샌딩 차량을 타는
-              조건이라 셋째 날 저녁 이후는 완전히 귀국 모드로 잡았습니다.
+              실제 항공편, 숙소 위치, 픽업과 샌딩 예약, 두 분의 컨디션 조건을
+              반영한 버전입니다.
             </p>
           </div>
 
@@ -82,9 +92,8 @@
             <p class="section-kicker">Day by Day</p>
             <h2>일자별 동선</h2>
             <p>
-              두 분 모두 컨디션 변수가 큰 일정이므로 오전 출발을 느리게 잡고,
-              오래 서는 동선과 긴 줄 대기를 최대한 줄였습니다. 도보가 길어지는
-              구간은 택시나 Uber로 끊어 이동하는 전제를 깔고 짰습니다.
+              기본 화면에는 하루 요약과 핵심 순서만 보이게 두고, 자세한 동선은
+              필요할 때만 펼쳐 보도록 정리했습니다.
             </p>
           </div>
 
@@ -96,9 +105,7 @@
             <p class="section-kicker">Food Guide</p>
             <h2>식당 추천</h2>
             <p>
-              공복이 길어지면 컨디션이 급격히 무너질 수 있어, 줄이 너무 길거나
-              식사 시간이 밀리기 쉬운 곳은 일부러 주력 카드에서 뺐습니다. 위에
-              부담이 큰 메뉴는 야식으로 과하게 먹지 않는 전제로 설명했습니다.
+              긴 대기보다 빨리 앉고 빨리 먹을 수 있는 곳 위주로 남겼습니다.
             </p>
           </div>
 
@@ -109,6 +116,7 @@
           <div class="section-heading">
             <p class="section-kicker">Travel Tips</p>
             <h2>실전 팁</h2>
+            <p>여행 중 바로 떠올려야 하는 행동 원칙만 짧게 정리했습니다.</p>
           </div>
 
           <div class="tips-grid" id="tips-grid" aria-live="polite"></div>
@@ -119,9 +127,8 @@
             <p class="section-kicker">Safety</p>
             <h2>위기 대응</h2>
             <p>
-              호텔 프런트, 픽업/샌딩 차량, 응급 번호를 적극적으로 쓰는 전제로
-              정리했습니다. 두 사람 중 한 명이 흔들리면 다른 한 명이 바로 읽고
-              실행할 수 있게 최대한 짧고 구체적으로 적었습니다.
+              먼저 해야 할 일만 보이고, 구체적 순서는 펼쳐서 확인할 수 있게
+              바꿨습니다.
             </p>
           </div>
 
@@ -152,11 +159,22 @@
             함께 썼고, 중국어 표기는 넣지 않았습니다.
           </p>
           <p id="last-updated"></p>
-          <ul class="source-list" id="source-list" aria-label="참고 출처"></ul>
+          <details class="source-details">
+            <summary>출처 보기</summary>
+            <ul class="source-list" id="source-list" aria-label="참고 출처"></ul>
+          </details>
         </div>
         <a class="footer-link" href="#top">맨 위로</a>
       </footer>
     </div>
+
+    <template id="glance-card-template">
+      <article class="glance-card">
+        <p class="overview-label"></p>
+        <h3 class="glance-title"></h3>
+        <p class="overview-note"></p>
+      </article>
+    </template>
 
     <template id="overview-card-template">
       <article class="overview-card">
@@ -181,7 +199,12 @@
 
           <div class="day-content">
             <p class="day-summary"></p>
-            <ul class="timeline"></ul>
+            <div class="day-highlights"></div>
+            <ul class="day-glance"></ul>
+            <details class="card-details">
+              <summary class="details-summary"></summary>
+              <ul class="timeline"></ul>
+            </details>
             <div class="day-tags"></div>
           </div>
         </div>
@@ -194,6 +217,7 @@
         <div class="food-copy">
           <p class="food-type"></p>
           <h3 class="food-name"></h3>
+          <div class="food-highlights"></div>
           <p class="food-description"></p>
           <div class="food-meta"></div>
         </div>
@@ -213,7 +237,10 @@
         <p class="tip-category"></p>
         <h3 class="safety-title"></h3>
         <p class="tip-description"></p>
-        <ul class="safety-actions"></ul>
+        <details class="card-details">
+          <summary class="details-summary"></summary>
+          <ul class="safety-actions"></ul>
+        </details>
       </article>
     </template>
 
